@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Anomaly Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Network Anomaly Detection</h1>
+        <p>Upload a CSV file containing network traffic data to detect potential intrusions and anomalies using Machine Learning.</p>
+        
+        <form id="uploadForm">
+            <input type="file" id="fileInput" accept=".csv" required>
+            <button type="submit" id="submitBtn">Detect Anomalies</button>
+        </form>
+
+        <div id="resultsContainer" style="display: none;">
+            <div class="summary-cards">
+                <div class="card">
+                    <h3>Total Processed</h3>
+                    <p id="totalCount">0</p>
+                </div>
+                <div class="card normal">
+                    <h3>Normal Traffic</h3>
+                    <p id="normalCount">0</p>
+                </div>
+                <div class="card anomaly">
+                    <h3>Anomalies Detected</h3>
+                    <p id="anomalyCount">0</p>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Traffic Flow ID</th>
+                            <th>Status Classification</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Results will be injected here via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="errorContainer" class="error-msg" style="display: none;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

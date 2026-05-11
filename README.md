@@ -1,20 +1,17 @@
-# ☁️ Cloud Anomaly Detection System
-
-Hey there! Welcome to the **Cloud Anomaly Detection** project.
-
+#Cloud Anomaly Detection System
 Ever wondered what's going on behind the scenes in your cloud infrastructure? Sometimes things go sideways — a sudden CPU spike, unusual network traffic, or a process that just doesn't look right. That's exactly the kind of stuff this project helps you catch.
 
-We built a system that uses **unsupervised machine learning** (specifically, an Isolation Forest) to spot unusual patterns in cloud data — no labeled datasets needed. Just feed it your metrics, and it figures out what's normal and what's not.
+We built a system that uses unsupervised machine learning(specifically, an Isolation Forest) to spot unusual patterns in cloud data — no labeled datasets needed. Just feed it your metrics, and it figures out what's normal and what's not.
 
 ---
 
 ## What Can It Do?
 
-- 🔍 **Detect anomalies automatically** — no need to manually define rules or thresholds
-- ⚡ **Real-time predictions** — upload data and get instant results
-- 📊 **Visual dashboard** — see your CPU, memory, disk, and network stats at a glance
-- 📈 **Graphical analysis** — anomalies are highlighted right on the charts
-- 🌐 **Simple web interface** — nothing fancy to install, just open a browser
+-Detect anomalies automatically — no need to manually define rules or thresholds
+-Real-time predictions — upload data and get instant results
+-Visual dashboard — see your CPU, memory, disk, and network stats at a glance
+-Graphical analysis — anomalies are highlighted right on the charts
+-Simple web interface — nothing fancy to install, just open a browser
 
 ---
 
@@ -24,12 +21,11 @@ Here's the tech stack we're working with:
 
 | Tool | What It Does |
 |------|-------------|
-| **Python 3.9+** | Core language |
-| **Flask** | Runs the web server |
-| **Pandas** | Handles all the data wrangling |
-| **Scikit-learn** | Powers the ML model |
-| **Matplotlib & Seaborn** | Makes the charts look good |
-| **HTML/CSS** | The frontend you actually see |
+| Python 3.9+| Core language |
+| Flask | Runs the web server |
+| Pandas | Handles all the data wrangling |
+| Scikit-learn | Powers the ML model |
+| HTML/CSS | The frontend you actually see |
 
 ---
 
@@ -47,7 +43,7 @@ anomaly-detection/
 │   └── test.html                  # Testing page
 ├── combined_dataset.csv           # Merged dataset
 ├── cloud_data.csv                 # Sample cloud data
-└── README.md                      # You're reading it :)
+└── README.md                      
 ```
 
 ---
@@ -56,11 +52,11 @@ anomaly-detection/
 
 Think of it like this:
 
-1. **Gather the data** — We collect cloud metrics like CPU usage, memory, network traffic, disk I/O, etc.
-2. **Clean it up** — Raw data is messy. We preprocess it so the model can make sense of it.
-3. **Train the model** — An Isolation Forest learns what "normal" looks like by studying the patterns.
-4. **Make predictions** — New data comes in, and the model flags anything that looks off (`0` = normal, `-1` = anomaly).
-5. **Show the results** — Everything gets plotted on charts and tables so you can see what's happening at a glance.
+1. Gather the data — We collect cloud metrics like CPU usage, memory, network traffic, disk I/O, etc.
+2. Clean it up — Raw data is messy. We preprocess it so the model can make sense of it
+3. Train the model — An Isolation Forest learns what "normal" looks like by studying the patterns.
+4. Make predictions — New data comes in, and the model flags anything that looks off (`0` = normal, `-1` = anomaly).
+5. Show the results — Everything gets plotted on charts and tables so you can see what's happening at a glance.
 
 ---
 
@@ -68,7 +64,7 @@ Think of it like this:
 
 ### Prerequisites
 
-Make sure you have **Python 3.9 or later** installed. Then grab the dependencies:
+Make sure you have Python 3.9 or later installed. Then grab the dependencies:
 
 ```bash
 pip install Flask pandas scikit-learn matplotlib seaborn numpy
@@ -109,13 +105,12 @@ Want to use your own dataset? No problem.
 
 Once the app is running, you'll find two main pages:
 
-### 🏠 Home Dashboard
+###Home Dashboard
 This is where the action is. You'll see:
-- **Charts** showing CPU usage, memory, disk usage, and network traffic over time
-- A quick **summary** of how many data points are normal vs. anomalous
-- A **detailed table** listing every detected anomaly
+- A quick summary of how many data points are normal vs. anomalous
+- A detailed table listing every detected anomaly
 
-### 🧪 Test Page
+###Test Page
 Want to try it yourself? Head to the test page where you can:
 - Upload your own CSV file
 - Run the model against it
@@ -141,6 +136,3 @@ The sample dataset includes these features:
 
 ---
 
-## Questions or Issues?
-
-If something isn't working or you have ideas to improve this, feel free to open an issue or reach out. Happy detecting! 🚀
